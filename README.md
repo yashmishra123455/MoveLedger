@@ -106,62 +106,6 @@ MoveLedger is a comprehensive financial ledger management system designed to hel
 | **DevOps** | Docker | Containerization |
 | | Git | Version control |
 
----
-
-## 🏗️ Architecture
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│                      USER BROWSER                           │
-│                                                              │
-│  ┌──────────────────────────────────────────────────────┐   │
-│  │              React Frontend Application              │   │
-│  │  ┌──────────────────────────────────────────────┐   │   │
-│  │  │           UI Components                      │   │   │
-│  │  │  - Dashboard    - Transactions              │   │   │
-│  │  │  - Reports      - Settings                  │   │   │
-│  │  └──────────────────────────────────────────────┘   │   │
-│  │                                                      │   │
-│  │  ┌──────────────────────────────────────────────┐   │   │
-│  │  │           Redux Store (State)                │   │   │
-│  │  └──────────────────────────────────────────────┘   │   │
-│  └──────────────────────────────────────────────────────┘   │
-│                          ↕ (HTTP/WebSocket)                 │
-├─────────────────────────────────────────────────────────────┤
-│                      BACKEND SERVER                         │
-│                                                              │
-│  ┌──────────────────────────────────────────────────────┐   │
-│  │         Node.js + Express API Server                │   │
-│  │  ┌──────────────────────────────────────────────┐   │   │
-│  │  │      Authentication & Authorization         │   │   │
-│  │  │      - JWT Tokens                           │   │   │
-│  │  │      - Session Management                   │   │   │
-│  │  └──────────────────────────────────────────────┘   │   │
-│  │                                                      │   │
-│  │  ┌──────────────────────────────────────────────┐   │   │
-│  │  │         API Routes & Controllers             │   │   │
-│  │  │  - /api/transactions  - /api/users          │   │   │
-│  │  │  - /api/categories    - /api/reports        │   │   │
-│  │  └──────────────────────────────────────────────┘   │   │
-│  │                                                      │   │
-│  │  ┌──────────────────────────────────────────────┐   │   │
-│  │  │    Business Logic & Data Validation         │   │   │
-│  │  └──────────────────────────────────────────────┘   │   │
-│  └──────────────────────────────────────────────────────┘   │
-│                          ↕ (Database Queries)               │
-├─────────────────────────────────────────────────────────────┤
-│                   MONGODB DATABASE                          │
-│                                                              │
-│  ┌──────────────────────────────────────────────────────┐   │
-│  │           Collections                               │   │
-│  │  - Users            - Transactions                 │   │
-│  │  - Categories       - Reports                      │   │
-│  └──────────────────────────────────────────────────────┘   │
-│                                                              │
-└─────────────────────────────────────────────────────────────┘
-```
-
----
 
 ## 📁 Project Structure
 
@@ -441,7 +385,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 - **Issues**: [GitHub Issues](https://github.com/yashmishra123455/MoveLedger/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/yashmishra123455/MoveLedger/discussions)
-- **Email**: your-email@example.com
+- **Email**: myash7166@gmail.com
 
 ---
 
