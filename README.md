@@ -1,16 +1,8 @@
-# MoveLedger
+## Tech Stack
+- Current: HTML, CSS, JavaScript
+- Planned: React, Node.js, MongoDB
 
-## Current Technology Stack
-- **HTML**
-- **CSS**
-- **JavaScript**
-
-## Future Migration Plans
-We're planning to migrate our technology stack to:
-- **React** for front-end development.
-- **Node.js** for back-end development.
-- **MongoDB** for database management.
-
-Stay tuned for updates! 
-
-Last updated: 2026-02-28 17:36:27 UTC
+## Future Migration Roadmap
+- **React**: Integration for building dynamic user interfaces.
+- **Node.js**: Server-side development for building scalable applications.
+- **MongoDB**: NoSQL database integration for flexible and scalable data storage.
