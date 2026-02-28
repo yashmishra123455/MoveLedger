@@ -1,0 +1,103 @@
+:root{
+  --cell:64px;
+  --board-size: calc(var(--cell) * 8);
+  --accent: #2f80ed;
+  --light: #f0d9b5;
+  --dark:  #b58863;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:#f3f6fb;
+  color:#222;
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+  align-items:center;
+  padding:18px;
+}
+
+header{
+  width:100%;
+  max-width:980px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  margin-bottom:14px;
+}
+
+header h1{margin:0;font-size:20px}
+.controls{display:flex;gap:8px;align-items:center}
+#status{font-size:13px;color:#b71c1c;margin-left:8px}
+
+.game{width:100%;max-width:980px;display:flex;gap:16px;align-items:flex-start}
+
+.board{
+  width:var(--board-size);
+  height:var(--board-size);
+  display:grid;
+  grid-template-columns:repeat(8,var(--cell));
+  grid-template-rows:repeat(8,var(--cell));
+  border:4px solid #333;
+  background:#333;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  position:relative;
+}
+
+.square{
+  width:var(--cell);
+  height:var(--cell);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:34px;
+  user-select:none;
+  cursor:pointer;
+  transition: transform .12s ease, box-shadow .12s ease;
+  color: #222;
+}
+
+.light { background: var(--light); }
+.dark  { background: var(--dark); color:#fff; }
+
+.square:hover{ transform: translateY(-4px); box-shadow: 0 8px 18px rgba(0,0,0,0.12); }
+
+.highlight { box-shadow: inset 0 0 0 4px rgba(65,161,73,0.85); transform: scale(1.03); }
+.capture   { box-shadow: inset 0 0 0 4px rgba(200,60,60,0.9); transform: scale(1.03); }
+.selected  { box-shadow: inset 0 0 0 4px rgba(47,128,237,0.95); transform: scale(1.03); }
+
+.sidebar{flex:1;min-width:200px;max-width:300px}
+.panel{background:#fff;padding:12px;border-radius:8px;margin-bottom:12px;box-shadow: 0 6px 16px rgba(0,0,0,0.06)}
+.moveList{max-height:360px;overflow:auto;font-size:14px;line-height:1.6}
+button{background:var(--accent);color:white;border:0;padding:8px 10px;border-radius:6px;cursor:pointer}
+button.small{background:#eee;color:#222;border:1px solid #ddd;padding:6px 10px}
+
+.promoOverlay{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.45);z-index:999;}
+.promoBox{background:#fff;padding:16px;border-radius:10px;min-width:260px;display:flex;flex-direction:column;gap:12px;align-items:center}
+.promoChoices{display:flex;gap:10px}
+
+/* clear visible buttons for promotion choices: use larger font and dark color */
+.promoButton{
+  font-size:28px;
+  padding:12px 16px;
+  border-radius:8px;
+  border:1px solid #ddd;
+  background:#fafafa;
+  cursor:pointer;
+  color: #222;
+  line-height:1;
+  min-width:56px;
+  text-align:center;
+}
+
+/* small visual improvements */
+.promoTitle{font-weight:600;margin-bottom:4px}
+
+/* extra styling to make squares look nicer on small screens */
+@media (max-width:720px){
+  :root{ --cell:48px; }
+  .board{ width: calc(var(--cell)*8); height: calc(var(--cell)*8); }
+}

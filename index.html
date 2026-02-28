@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chess Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Full Chess — Unicode Pieces (♔♕♖♗♘♙)</h1>
+    <div class="controls">
+      <div id="turnLabel">Turn: <strong id="turnText">White</strong></div>
+      <button id="newGame">New Game</button>
+      <button id="undoBtn">Undo</button>
+      <div id="status" aria-live="polite"></div>
+    </div>
+  </header>
+
+  <main class="game">
+    <div id="board" class="board" role="grid" aria-label="Chess board"></div>
+
+    <aside class="sidebar">
+      <div class="panel">
+        <h3>Move History</h3>
+        <div id="moveList" class="moveList"></div>
+      </div>
+
+      <div class="panel">
+        <h3>Controls</h3>
+        <ul>
+          <li>Click a piece to select.</li>
+          <li>Click a highlighted square to move.</li>
+          <li>Undo supported, promotion popup on pawn promotion.</li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+
+  <!-- Promotion modal -->
+  <div id="promo" class="promoOverlay" style="display:none">
+    <div class="promoBox" role="dialog" aria-modal="true">
+      <div class="promoTitle">Promote pawn to:</div>
+      <div id="promoChoices" class="promoChoices"></div>
+      <button id="promoCancel" class="small">Cancel (defaults to Queen)</button>
+    </div>
+  </div>
+
+  <footer>
+    <small>Built with Unicode pieces — fast, reliable, perfect for projects.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
