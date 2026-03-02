@@ -1,4 +1,4 @@
-# AI chess chess
+# AI chess engine
 
 > A modern, intuitive application for tracking and managing your financial movements and ledger entries.
 
