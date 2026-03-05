@@ -1,6 +1,6 @@
 # AI chess engine
 
-> A modern, intuitive application for tracking and managing your financial movements and ledger entries.
+> A modern that is, intuitive application for tracking and managing your financial movements and ledger entries.
 
 ## 📋 Table of Contents
 - [Overview](#overview)
